@@ -1,34 +1,86 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
+body {
+  background-color: var(--DarkBlue);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: end;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: "Manrope", sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  background-color: var(--DarkGrayishBlue);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+  margin: 1rem;
+  margin-bottom: 12rem;
+  padding: 1rem 1rem 3rem;
+  max-width: calc(375px - 2rem);
 }
 
-@keyframes App-logo-spin {
+.title {
+  color: var(--NeonGreen);
+  margin-top: 1rem;
+  font-size: ;
+}
+
+.advice {
+  color: var(--LightCyan);
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+.devider {
+  margin: 1rem 0rem;
+}
+
+.button {
+  background-color: var(--NeonGreen);
+  padding: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -35px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 30px 2px var(--NeonGreen);
+}
+
+.button:focus {
+  animation: rotation 0.4s ease-in-out forwards;
+}
+
+@keyframes rotation {
   from {
     transform: rotate(0deg);
   }
